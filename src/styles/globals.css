@@ -42,13 +42,83 @@
   src: url("../libs/fonts/Ubuntu-Regular.ttf");
 }
 
-
-.parentGrid {
-border-radius: 2px;
-border-bottom-right-radius: 50px;
-background-color: white;
+body {
+  font-family: 'Ubuntu-Regular',
 }
 
-.parentGrid:hover #gridItem {
+.topGrid {
+  
+}
+
+.parentGrid {
+  clip-path: polygon(100% 0, 100% 80%, 70% 90%, 0 90%, 0 0);
+}
+
+.parentGrid:hover {
   background-color: white;
+}
+
+
+.parentGrid:hover img{
+  transform:scale(1.1);
+}
+
+.parentGrid:hover {
+  background-color: white;
+  color:white;
+}
+
+
+
+
+
+//Types
+
+.typesContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 4px 20px;
+  gap: 10px;
+  width: 75px;
+  height: 24px;  
+}
+.grass {
+  background: #9BCC50;
+}
+.poison {
+  background: #B97FC9;
+}
+.fire {
+  background: #FC7C23;
+}
+.flying {
+  background: #30A7D7;
+}
+.water{
+  background: #4592C4;
+}
+.bug {
+  background: #729F3F;
+}
+
+
+
+
+/* Ash & Pikachu Arrive in Pokémon Universe */
+
+.bottomTitle{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.bottomTitle p{
+/* Web Typography/Title */
+font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 55px;
+text-align: center;
+color: #257BC4;
 }
