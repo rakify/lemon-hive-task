@@ -17,27 +17,40 @@ const Details: FC<Props> = ({ props }) => {
   return (
     <>
       <div className="contianer flex flex-row">
-        <div className="flex flex-col p-[50px]">
+        <div className="leftTop flex flex-col gap-2 p-[50px]">
           <p className="text-5xl font-medium leading-tight text-blue-500 capitalize">
             {pokemon?.name ?? "Not found"} #{pokemon?.id! < 10 ? "00" : "0"}
             {pokemon?.id}
           </p>
+          <div
+            style={{
+              fontWeight: 400,
+              fontSize: "20px",
+              lineHeight: "23px",
+            }}
+          >
+            There is a plant seed on its back right from the day this Pokémon is
+            born. The seed slowly grows larger.
+          </div>
+          {/* Height Weight */}
           <div className="prectangle3">
             <div className="rectangle3">
               <div className="flex flex-column justify-between ">
                 <div>
                   <p>Height</p>
-                  {pokemon?.height}
+                  <p style={{ fontWeight: 200 }}>{pokemon && pokemon?.height/10} m</p>
                   <p>Weight</p>
-                  {pokemon?.weight}
+                  <p style={{ fontWeight: 200 }}>{pokemon && pokemon?.weight/10} kg</p>
                 </div>
                 <div>
                   <p>Category</p>
-                  {pokemon?.height}
+                  <p style={{ fontWeight: 200 }}>Seed</p>
                   <p>Abilities</p>
                   {pokemon?.abilities.map((ability, index) => (
                     <div key={index} className="capitalize">
-                      {ability?.ability?.name}
+                      <p style={{ fontWeight: 200 }}>
+                        {ability?.ability?.name}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -63,7 +76,13 @@ const Details: FC<Props> = ({ props }) => {
           {/* Weakness */}
           <div className="pb-[50px] pr-[50px] pl-[50px]">
             <p>Weakness</p>
-            <div />
+            <div className="grid grid-rows-1 grid-cols-3 gap-3 mb-5 lg:mb-3">
+              <div className="typesContainer flex  col-span-2 items-center ">
+                {["fire", "psychic", "flying", "ice"].map((type, index) => (
+                  <TypePokemon props={{ index, type: type }} />
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Stats */}

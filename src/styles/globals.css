@@ -81,22 +81,28 @@ body {
   height: 24px;  
 }
 .grass {
-  background: #9BCC50;
+  background-color: #9BCC50;
 }
 .poison {
-  background: #B97FC9;
+  background-color: #B97FC9;
 }
 .fire {
-  background: #FC7C23;
+  background-color: #FC7C23;
 }
 .flying {
-  background: #30A7D7;
+  background-color: #30A7D7;
 }
 .water{
-  background: #4592C4;
+  background-color: #4592C4;
 }
 .bug {
-  background: #729F3F;
+  background-color: #729F3F;
+}
+.psychic {
+  background-color: #F366B9;
+}
+.ice {
+  background-color: #3DC7EF;
 }
 
 
@@ -124,6 +130,10 @@ color: #257BC4;
 
 /* Details */
 
+.leftTop{
+  flex: 1;
+}
+
 .prectangle3 {
   position: relative;
   background-color: magenta;
@@ -142,15 +152,22 @@ color: #257BC4;
   right: 4px;
   bottom: 4px;
   background-color: #d9d9d9;
-  padding:50px;
+  padding:40px;
 }
 
 .rectangle3 p {
-  font-weight: 400;
+  font-weight: 500;
 font-size: 20px;
 line-height: 23px;
+padding-bottom: 5px;
 }
 
+.image {
+  flex:2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .image img:hover {
     transform:scale(1.1); 
 }
@@ -158,6 +175,7 @@ line-height: 23px;
 .rightSide {
   display: flex;
   flex-direction: column;
+  flex:1
 }
 .rightSide p{
   font-weight: 400;
@@ -177,4 +195,13 @@ border-radius: 4px;
 font-size: 20px;
 font-weight: 400;
 line-height: 23px;
+}
+
+
+/* footer */
+
+.frontBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
