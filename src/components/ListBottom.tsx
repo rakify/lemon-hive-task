@@ -24,7 +24,7 @@ const ListBottom = (props: Props) => {
     console.log(data.pokemon.types);
 
     return (
-      <div className="grid grid-rows-1 grid-cols-3 gap-3 mb-5 lg:mb-3 ml-4">
+      <div className="grid grid-rows-1 grid-cols-3 gap-3 mb-5 lg:mb-3">
         <div className="typesContainer flex  col-span-2 items-center ">
           {data.pokemon?.types.map((type, index) => (
             <TypePokemon props={{ index, type: type.type.name }} />

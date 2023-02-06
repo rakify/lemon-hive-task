@@ -50,9 +50,6 @@ body {
   
 }
 
-.parentGrid {
-  clip-path: polygon(100% 0, 100% 80%, 70% 90%, 0 90%, 0 0);
-}
 
 .parentGrid:hover {
   background-color: white;
@@ -72,13 +69,13 @@ body {
 
 
 
-//Types
+/* //Types */
 
 .typesContainer {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 4px 20px;
+  padding: 4px 0px;
   gap: 10px;
   width: 75px;
   height: 24px;  
@@ -121,4 +118,63 @@ font-size: 48px;
 line-height: 55px;
 text-align: center;
 color: #257BC4;
+}
+
+
+
+/* Details */
+
+.prectangle3 {
+  position: relative;
+  background-color: magenta;
+  clip-path: polygon(100% 0, 100% 66%, 84% 100%, 0 100%, 0 0);
+  height:200px;
+  width: 310px;
+  border-radius: 10px;
+  margin-top: 70px;
+}
+
+.rectangle3 {
+  clip-path: polygon(100% 0, 100% 66%, 84% 100%, 0 100%, 0 0);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-color: #d9d9d9;
+  padding:50px;
+}
+
+.rectangle3 p {
+  font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+}
+
+.image img:hover {
+    transform:scale(1.1); 
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+}
+.rightSide p{
+  font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+}
+
+
+.footer {
+  display: inline-block;
+  padding: 10px;
+  height: 56px;
+  width: 250px;
+  background: #FFCB05;
+border: 6px solid #2B73B9;
+border-radius: 4px;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
 }
