@@ -24,7 +24,7 @@ const Details: FC<Props> = ({ props }) => {
           </p>
           <div
             style={{
-              fontWeight: 400,
+              fontWeight: 200,
               fontSize: "20px",
               lineHeight: "23px",
             }}
@@ -38,17 +38,21 @@ const Details: FC<Props> = ({ props }) => {
               <div className="flex flex-column justify-between ">
                 <div>
                   <p>Height</p>
-                  <p style={{ fontWeight: 200 }}>{pokemon && pokemon?.height/10} m</p>
+                  <p style={{ fontWeight: 200, fontSize: "16px" }}>
+                    {pokemon && pokemon?.height / 10} m
+                  </p>
                   <p>Weight</p>
-                  <p style={{ fontWeight: 200 }}>{pokemon && pokemon?.weight/10} kg</p>
+                  <p style={{ fontWeight: 200, fontSize: "16px" }}>
+                    {pokemon && pokemon?.weight / 10} kg
+                  </p>
                 </div>
                 <div>
                   <p>Category</p>
-                  <p style={{ fontWeight: 200 }}>Seed</p>
+                  <p style={{ fontWeight: 200, fontSize: "16px" }}>Seed</p>
                   <p>Abilities</p>
                   {pokemon?.abilities.map((ability, index) => (
                     <div key={index} className="capitalize">
-                      <p style={{ fontWeight: 200 }}>
+                      <p style={{ fontWeight: 200, fontSize: "16px" }}>
                         {ability?.ability?.name}
                       </p>
                     </div>

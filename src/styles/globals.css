@@ -2,54 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Ubunto-Bold";
-  src: url("../libs/fonts/Ubuntu-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Ubunto-BoldItalic";
-  src: url("../libs/fonts/Ubuntu-BoldItalic.ttf");
-}
-
-@font-face {
-  font-family: "Ubunto-Italic";
-  src: url("../libs/fonts/Ubuntu-Italic.ttf");
-}
-
-@font-face {
-  font-family: "Ubuntu-Light";
-  src: url("../libs/fonts/Ubuntu-Light.ttf");
-}
-
-@font-face {
-  font-family: "Ubuntu-LightItalic";
-  src: url("../libs/fonts/Ubuntu-LightItalic.ttf");
-}
-
-@font-face {
-  font-family: "Ubuntu-Medium";
-  src: url("../libs/fonts/Ubuntu-Medium.ttf");
-}
-
-@font-face {
-  font-family: "Ubuntu-MediumItalic";
-  src: url("../libs/fonts/Ubuntu-MediumItalic.ttf");
-}
-
-@font-face {
-  font-family: "Ubuntu-Regular";
-  src: url("../libs/fonts/Ubuntu-Regular.ttf");
-}
-
-body {
-  font-family: 'Ubuntu-Regular',
-}
-
-.topGrid {
-  
-}
-
 
 .parentGrid:hover {
   background-color: white;
@@ -116,8 +68,6 @@ justify-content: center;
 align-items: center;
 }
 .bottomTitle p{
-/* Web Typography/Title */
-font-family: 'Ubuntu';
 font-style: normal;
 font-weight: 700;
 font-size: 48px;
@@ -156,7 +106,7 @@ color: #257BC4;
 }
 
 .rectangle3 p {
-  font-weight: 500;
+  font-weight: 400;
 font-size: 20px;
 line-height: 23px;
 padding-bottom: 5px;
