@@ -17,7 +17,7 @@ const Details: FC<Props> = ({ props }) => {
 
   return (
     <>
-      <div className="flex justify-between">
+      <div className="flex justify-around">
         <div
           className="hidden sm:flex"
           style={{ backgroundImage: "url(/images/Left.png)", flex: 1 }}
@@ -83,7 +83,7 @@ const Details: FC<Props> = ({ props }) => {
             </div>
             {/* Only in larger device show image */}
             <div className="hidden sm:flex">
-              <div className="p-[10px] image">
+              <div className="p-[10px] image flex flex-col">
                 <img
                   src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
                     pokemon?.id ?? 0
@@ -91,6 +91,14 @@ const Details: FC<Props> = ({ props }) => {
                   alt="pokemon"
                   className="sm:w-[475px] sm:h-[475px] transition-all duration-300"
                 />
+                <div
+                  style={{
+                    height: "42px",
+                    width: "283px",
+                    filter: "blur(29px)",
+                    background: "rgba(0, 0, 0, 0.2)",
+                  }}
+                ></div>
               </div>
             </div>
             <div className="rightSide">
