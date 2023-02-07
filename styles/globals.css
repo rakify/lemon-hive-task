@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.parentGrid {
+  clip-path: polygon(100% 0, 100% 70%, 70% 90%, 0 90%, 0 0);
+}
+
+
+.parentGrid:hover img{
+  transform:scale(1.1);
+}
+
+.parentGrid:hover {
+  background-color: white;
+  color:white;
+}
+
+
+
+
+
+/* Types */
+
+.typesContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 4px 0px;
+  gap: 10px;
+  width: 75px;
+  height: 24px;  
+}
+.grass {
+  background-color: #9BCC50;
+}
+.poison {
+  background-color: #B97FC9;
+}
+.fire {
+  background-color: #FC7C23;
+}
+.flying {
+  background-color: #30A7D7;
+}
+.water{
+  background-color: #4592C4;
+}
+.bug {
+  background-color: #729F3F;
+}
+.psychic {
+  background-color: #F366B9;
+}
+.ice {
+  background-color: #3DC7EF;
+}
+
+
+
+
+/* Ash & Pikachu Arrive in Pokémon Universe */
+
+.bottomTitle{
+font-weight: 700;
+text-align: center;
+color: #257BC4;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+
+/* Details */
+
+.leftTop{
+  flex: 1;
+}
+
+.prectangle3 {
+  position: relative;
+  background-color: magenta;
+  clip-path: polygon(100% 0, 100% 66%, 84% 100%, 0 100%, 0 0);
+  height:200px;
+  width: 310px;
+  border-radius: 10px;
+  margin-top: 70px;
+}
+
+.rectangle3 {
+  clip-path: polygon(100% 0, 100% 66%, 84% 100%, 0 100%, 0 0);
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background-color: #d9d9d9;
+  padding:40px;
+}
+
+.rectangle3 p {
+  font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+padding-bottom: 5px;
+}
+
+.image {
+  flex:2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image img:hover {
+    transform:scale(1.1); 
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  flex:1
+}
+.rightSide p{
+  font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+}
+
+
+.footer {
+  display: inline-block;
+  padding: 10px;
+  height: 56px;
+  width: 250px;
+  background: #FFCB05;
+border: 6px solid #2B73B9;
+border-radius: 4px;
+font-size: 20px;
+font-weight: 400;
+line-height: 23px;
+}
+
+
+/* footer */
+
+.frontBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
