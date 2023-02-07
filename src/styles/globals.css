@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 
-.parentGrid:hover {
-  background-color: white;
+.parentGrid {
+  clip-path: polygon(100% 0, 100% 70%, 70% 90%, 0 90%, 0 0);
 }
 
 
@@ -63,17 +63,13 @@
 /* Ash & Pikachu Arrive in Pokémon Universe */
 
 .bottomTitle{
-display: flex;
-justify-content: center;
-align-items: center;
-}
-.bottomTitle p{
-font-style: normal;
 font-weight: 700;
 font-size: 48px;
 line-height: 55px;
 text-align: center;
 color: #257BC4;
+margin-left: auto;
+margin-right: auto;
 }
 
 

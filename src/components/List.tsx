@@ -14,7 +14,7 @@ const Pokemons: FC<Props> = ({ props }) => {
   const { pokemons } = props;
 
   return (
-    <div className="topGrid grid grid-rows-1 grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-14 p-20 pb-8">
+    <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-14 p-20 pb-8">
       {pokemons.length > 0 &&
         pokemons.map((item, index) => (
           <Link
@@ -31,16 +31,16 @@ const Pokemons: FC<Props> = ({ props }) => {
               <img
                 src={item?.artwork ?? ""}
                 alt={item?.name ?? ""}
-                className="w-40 xl:w-44 h-auto transition-all duration-300"
+                className="w-[215px] h-[215px] transition-all duration-300"
               />
             </div>
 
-            <div className="itemName m-4">
-              <p className="font-extra text-[20px] capitalize">
+            <div className="itemName ml-3">
+              <p className="text-[20px] capitalize">
                 {item?.name ?? ""}
               </p>
             </div>
-            <div className=" pl-3">
+            <div className="pl-3 pb-5">
               <ListBottom name={item?.name ?? ""} />
             </div>
           </Link>

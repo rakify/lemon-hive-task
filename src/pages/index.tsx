@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import { gql, useQuery } from "@apollo/client";
-import client from "apollo-client";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import List from "../components/List";
 import { GET_POKEMONS } from "../pages/api/gqlQueries";
 import { IFilterGet, IListPokemon, IPokemons } from "../libs/interface";
 import Header from "@/components/Header";
+import Link from "next/link";
+import ListBottom from "@/components/ListBottom";
 
 export default function Home() {
   const [filter, setFilter] = useState<IFilterGet>({
@@ -21,16 +24,85 @@ export default function Home() {
   if (!data) return "No data found.";
 
   return (
-    <div
-      className="bg-cover bg-center"
-      style={{ backgroundImage: "url(/images/Background.png)" }}
-    >
-      <Header />
-      <List props={{ pokemons: data.pokemons.results }} />
-      <div className="bottomTitle">
-        <p>Ash & Pikachu Arrive in Pokémon Universe</p>
+    <>
+      <div
+        className="bg-cover bg-center"
+        style={{ backgroundImage: "url(/images/Background.png)" }}
+      >
+        <Header />
+        <div className="hidden md:block">
+          <List props={{ pokemons: data.pokemons.results }} />
+        </div>
+        <div className="md:hidden">
+          <Carousel
+            additionalTransfrom={0}
+            arrows
+            autoPlaySpeed={3000}
+            centerMode={false}
+            containerClass="pb-8"
+            focusOnSelect={false}
+            itemClass="parentGrid transition-all duration-300 bg-white hover:bg-blue-500 mr-[10px]  rounded-[10px]"
+            keyBoardControl
+            minimumTouchDrag={80}
+            partialVisible
+            pauseOnHover
+            renderArrowsWhenDisabled={false}
+            renderButtonGroupOutside={false}
+            renderDotsOutside={false}
+            responsive={{
+              mobile: {
+                breakpoint: {
+                  max: 464,
+                  min: 0,
+                },
+                items: 1,
+                partialVisibilityGutter: 100,
+              },
+            }}
+            rewind={true}
+            rewindWithAnimation={false}
+            rtl={false}
+            shouldResetAutoplay
+            showDots={false}
+            sliderClass=""
+            slidesToSlide={1}
+            swipeable
+          >
+            {data?.pokemons?.results.map((item, index) => (
+              <Link href={`/pokemon/${item?.name ?? ""}`} key={index} className="">
+                <div className="relative flex  m-2  bg-slate-100  rounded-[10px]">
+                  <p className="absolute z-30 top-0 text-[15px] text-black">
+                    #{index + 1 < 10 ? "00" : "0"}
+                    {index + 1}
+                  </p>
+
+                  <img
+                    src={item?.artwork ?? ""}
+                    alt={item?.name ?? ""}
+                    className="w-[150px] h-[150px]  transition-all duration-300"
+                  />
+                </div>
+
+                <div className="itemName m-4">
+                  <p className="text-[20px] capitalize">
+                    {item?.name ?? ""}
+                  </p>
+                </div>
+                <div className="pl-3 pb-10">
+                  <ListBottom name={item?.name ?? ""} />
+                </div>
+              </Link>
+            ))}
+          </Carousel>
+        </div>
       </div>
-      <div className=" space-y-5 relative">
+      <div
+        className="bottomTitle bg-cover bg-center w-[542px] h-[110px] mt-[107px] mb-[30px] sm:font-extra"
+        style={{ backgroundImage: "url(/images/Brush.png)" }}
+      >
+        Ash & Pikachu Arrive in Pokémon Universe
+      </div>
+      <div className=" space-y-5 relative m-[30px]">
         <div className="w-[70%] ">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quam
           harum nesciunt, numquam reiciendis similique repellendus accusamus
@@ -92,6 +164,6 @@ export default function Home() {
           iusto eligendi labore mollitia eius.
         </div>
       </div>
-    </div>
+    </>
   );
 }

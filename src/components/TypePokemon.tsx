@@ -18,7 +18,7 @@ const TypePokemon: React.FC<Props> = ({ props }) => {
       key={index}
       className={`
         ${type}
-        p-2 text-base text-white rounded-md mr-2 mt-1 capitalize`}
+        pl-1 pr-1 text-base text-white rounded-md mr-2 mt-1 capitalize`}
     >
       {type}
     </div>
