@@ -3,7 +3,7 @@ import React from "react";
 const FrontBottom = () => {
   return (
     <>
-      <div className="fb flex flex-row gap-3">
+      <div className="fb hidden sm:flex flex-row gap-3 pl-4 pr-4">
         <div className="flex flex-col gap-3" style={{ flex: 6 }}>
           <div className="flex flex-row gap-3">
             <div className="flex flex-col gap-3" style={{ flex: 6 }}>
@@ -129,6 +129,40 @@ const FrontBottom = () => {
             ac. A sit id etiam vitae non posuere tristique. Morbi sit mi sed nam
             amet tristique tellus. Sed quam aliquam pharetra.
           </p>
+        </div>
+      </div>
+
+      <div className="fb flex flex-col gap-3 sm:hidden p-3 leading-[18px]">
+        <div className="">
+          Lorem ipsum dolor sit amet consectetur. Risus cursus nibh elementum
+          ornare a aliquet ac. Feugiat scelerisque ultrices tempor facilisi
+          tempus risus nunc. Proin quis morbi posuere nisl etiam scelerisque.
+          Proin pretium gravida semper ut erat nisi. Pulvinar ac mattis porta
+          amet et. Nisl urna non fames felis leo. Vitae pulvinar sed viverra sit
+          pretium lorem elementum. Iaculis sit maecenas sodales mi convallis
+          justo aliquam. Tincidunt semper ut ornare vivamus lectus.
+        </div>
+        <div className="flex flex-row justify-center gap-3 w-[350px] h-[290px] m-auto">
+          <div className="flex items-center justify-center">
+            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
+          </div>
+          <div className="flex flex-col justify-start space-y-4">
+            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
+            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
+          </div>
+          <div className="flex flex-col justify-end space-y-4">
+            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
+            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
+          </div>
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet consectetur. Risus cursus nibh elementum
+          ornare a aliquet ac. Feugiat scelerisque ultrices tempor facilisi
+          tempus risus nunc. Proin quis morbi posuere nisl etiam scelerisque.
+          Proin pretium gravida semper ut erat nisi. Pulvinar ac mattis porta
+          amet et. Nisl urna non fames felis leo. Vitae pulvinar sed viverra sit
+          pretium lorem elementum. Iaculis sit maecenas sodales mi convallis
+          justo aliquam. Tincidunt semper ut ornare vivamus lectus.
         </div>
       </div>
     </>
