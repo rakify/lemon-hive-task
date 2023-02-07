@@ -22,7 +22,6 @@ const DetailsPage = () => {
 
   return (
     <div>
-      <Header />
       <Details props={{ pokemon: data.pokemon }} />
     </div>
   );
