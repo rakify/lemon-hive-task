@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+*{
+  font-family: 'Ubuntu';
+  font-style: normal;
+}
+
 .parentGrid {
   clip-path: polygon(100% 0, 100% 70%, 70% 90%, 0 90%, 0 0);
 }
@@ -15,6 +20,22 @@
 .parentGrid:hover {
   background-color: white;
   color:white;
+}
+
+.itemName p {
+  font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 18px;
+}
+
+.childGrid p {
+  font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 16px;
 }
 
 
@@ -31,6 +52,8 @@
   gap: 10px;
   width: 75px;
   height: 24px;  
+  font-size: 14px;
+line-height: 16px;
 }
 .grass {
   background-color: #9BCC50;
@@ -68,6 +91,15 @@ text-align: center;
 color: #257BC4;
 margin-left: auto;
 margin-right: auto;
+}
+
+.fb {
+  font-family: 'Ubuntu';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: justify;
 }
 
 
@@ -150,3 +182,4 @@ line-height: 23px;
   flex-direction: row;
   justify-content: space-around;
 }
+

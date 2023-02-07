@@ -36,7 +36,7 @@ const Pokemons: FC<Props> = ({ props }) => {
             </div>
 
             <div className="itemName ml-3">
-              <p className="text-[20px] capitalize">{item?.name ?? ""}</p>
+              <p className="capitalize">{item?.name ?? ""}</p>
             </div>
             <div className="pl-3 pb-5">
               <ListBottom props={{ name: item?.name ?? "" }} />
