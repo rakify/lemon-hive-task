@@ -105,6 +105,7 @@ export default function Home() {
             </Carousel>
           </div>
         </div>
+        </div>
         <div className="flex justify-between">
           <div
             className="hidden sm:flex"
@@ -125,7 +126,6 @@ export default function Home() {
             style={{ backgroundImage: "url(/images/Left.png)", flex: 1 }}
           ></div>
         </div>
-      </div>
     </>
   );
 }
