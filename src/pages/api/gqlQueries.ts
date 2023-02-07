@@ -26,6 +26,7 @@ export const GET_SINGLE_POKEMON_DETAILS = gql`
       name
       height
       weight
+      
       stats {
         base_stat
         effort
