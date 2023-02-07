@@ -3,7 +3,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-center pt-4 mb-0.6 lg:mb-1">
+    <header className="flex items-center justify-center pt-4 mb-10 sm:mb-3">
       <Link href="/">
         <img
           src="/images/Logo.png"

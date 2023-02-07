@@ -52,7 +52,7 @@ export default function Home() {
             responsive={{
               mobile: {
                 breakpoint: {
-                  max: 464,
+                  max: 640,
                   min: 0,
                 },
                 items: 1,
@@ -97,12 +97,12 @@ export default function Home() {
         </div>
       </div>
       <div
-        className="bottomTitle bg-cover bg-center w-[542px] h-[110px] mt-[107px] mb-[30px] sm:font-extra"
+        className="bottomTitle bg-cover bg-center sm:w-[271px] md:w-[542px] sm:h-[56] md:h-[110px] mt-[107px] mb-[30px] text-2xl sm:text-3xl"
         style={{ backgroundImage: "url(/images/Brush.png)" }}
       >
         Ash & Pikachu Arrive in Pokémon Universe
       </div>
-      <div className=" space-y-5 relative m-[30px]">
+      <div className="space-y-5 relative m-[30px]">
         <div className="w-[70%] ">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quam
           harum nesciunt, numquam reiciendis similique repellendus accusamus

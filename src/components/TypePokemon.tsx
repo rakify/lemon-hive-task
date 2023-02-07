@@ -1,5 +1,4 @@
 import React from "react";
-// import styles from "../../styles/Type.module.scss";
 
 interface Props {
   props: PropsItems;

@@ -16,7 +16,17 @@ const Details: FC<Props> = ({ props }) => {
 
   return (
     <>
-      <div className="contianer flex flex-row">
+      <div className="container flex flex-col sm:flex-row">
+        {/* Show image on top of phone */}
+        <div className="sm:hidden image p-[10px]">
+          <img
+            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+              pokemon?.id ?? 0
+            }.png`}
+            alt="pokemon"
+            className="w-[288px] h-[288px] transition-all duration-300"
+          />
+        </div>
         <div className="leftTop flex flex-col gap-2 p-[50px]">
           <p className="text-5xl font-medium leading-tight text-blue-500 capitalize">
             {pokemon?.name ?? "Not found"} #{pokemon?.id! < 10 ? "00" : "0"}
@@ -62,14 +72,17 @@ const Details: FC<Props> = ({ props }) => {
             </div>
           </div>
         </div>
-        <div className="image p-[50px]">
-          <img
-            src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
-              pokemon?.id ?? 0
-            }.png`}
-            alt="pokemon"
-            className="w-[475px] h-[475px] transition-all duration-300"
-          />
+        {/* Only in larger device show image */}
+        <div className="hidden sm:flex">
+          <div className="p-[10px] image">
+            <img
+              src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${
+                pokemon?.id ?? 0
+              }.png`}
+              alt="pokemon"
+              className="sm:w-[475px] sm:h-[475px] transition-all duration-300"
+            />
+          </div>
         </div>
         <div className="rightSide">
           {/* Types */}
@@ -83,7 +96,7 @@ const Details: FC<Props> = ({ props }) => {
             <div className="grid grid-rows-1 grid-cols-3 gap-3 mb-5 lg:mb-3">
               <div className="typesContainer flex  col-span-2 items-center ">
                 {["fire", "psychic", "flying", "ice"].map((type, index) => (
-                  <TypePokemon props={{ index, type: type }} />
+                  <TypePokemon props={{ index, type: type }} key={index} />
                 ))}
               </div>
             </div>
@@ -93,11 +106,8 @@ const Details: FC<Props> = ({ props }) => {
           <div className="w-full lg:px-10 pb-[50px] pr-[50px] pl-[50px]">
             <p>Stats</p>
             {pokemon?.stats.map((stat, index) => (
-              <div className="mb-5 mt-2 lg:mb-3">
-                <div
-                  key={index}
-                  className="flex items-center justify-between mb-1"
-                >
+              <div className="mb-5 mt-2 lg:mb-3" key={index}>
+                <div className="flex items-center justify-between mb-1">
                   <div className="flex items-center">
                     <p
                       className="font-semi capitalize"
