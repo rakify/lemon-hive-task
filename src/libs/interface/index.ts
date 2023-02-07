@@ -1,20 +1,20 @@
-export interface IFilterGet {
+export interface TFilter {
   limit: number;
   offset: number;
 }
 
-export interface IListPokemon {
+export interface TPokemonList {
   pokemons?: {
     count?: number;
     message?: string;
     next?: string;
     previous?: string;
-    results: Array<IPokemons>;
+    results: Array<TPokemon>;
     status?: boolean;
   };
 }
 
-export interface IPokemons {
+export interface TPokemon {
   id: number;
   url: string;
   name: string;
@@ -23,7 +23,7 @@ export interface IPokemons {
   dreamworld: string;
 }
 
-export interface IDetail {
+export interface TDetail {
   id: number;
   name: string;
   base_experience: number;

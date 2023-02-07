@@ -1,22 +1,22 @@
 import Link from "next/link";
 import React, { FC } from "react";
-import { IPokemons } from "../libs/interface";
+import { TPokemon } from "../libs/interface";
 import ListBottom from "./ListBottom";
 
 interface Props {
   props: PropsItems;
 }
-
 interface PropsItems {
-  pokemon: IPokemons;
+  pokemons: TPokemon;
 }
+
 const Pokemons: FC<Props> = ({ props }) => {
   const { pokemons } = props;
 
   return (
     <div className="grid grid-rows-1 grid-cols-1 sm:grid-cols-2 xl:grid-cols-5 gap-8 lg:gap-14 p-20 pb-8">
-      {pokemons.length > 0 &&
-        pokemons.map((item, index) => (
+      {pokemons &&
+        pokemons.map((item: TPokemon, index: number) => (
           <Link
             href={`/pokemon/${item?.name ?? ""}`}
             key={index}
@@ -36,12 +36,10 @@ const Pokemons: FC<Props> = ({ props }) => {
             </div>
 
             <div className="itemName ml-3">
-              <p className="text-[20px] capitalize">
-                {item?.name ?? ""}
-              </p>
+              <p className="text-[20px] capitalize">{item?.name ?? ""}</p>
             </div>
             <div className="pl-3 pb-5">
-              <ListBottom name={item?.name ?? ""} />
+              <ListBottom props={{ name: item?.name ?? "" }} />
             </div>
           </Link>
         ))}

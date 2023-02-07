@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { IDetail } from "../libs/interface/index";
+import { TDetail } from "../libs/interface/index";
 import Footer from "./Footer";
 import ListBottom from "./ListBottom";
 import TypePokemon from "./TypePokemon";
@@ -9,7 +9,7 @@ interface Props {
 }
 
 interface PropsItems {
-  pokemon: IDetail | null;
+  pokemon: TDetail | null;
 }
 const Details: FC<Props> = ({ props }) => {
   const { pokemon } = props;
@@ -28,7 +28,7 @@ const Details: FC<Props> = ({ props }) => {
           />
         </div>
         <div className="leftTop flex flex-col gap-2 p-[50px]">
-          <p className="text-5xl font-medium leading-tight text-blue-500 capitalize">
+          <p className="text-2xl sm:text-5xl font-medium leading-tight text-blue-500 capitalize text-center sm:text-left mb-2">
             {pokemon?.name ?? "Not found"} #{pokemon?.id! < 10 ? "00" : "0"}
             {pokemon?.id}
           </p>
@@ -88,7 +88,7 @@ const Details: FC<Props> = ({ props }) => {
           {/* Types */}
           <div className="p-[50px]">
             <p>Type</p>
-            <ListBottom name={pokemon?.name ?? ""} />
+            <ListBottom props={{ name: pokemon?.name ?? "" }} />
           </div>
           {/* Weakness */}
           <div className="pb-[50px] pr-[50px] pl-[50px]">

@@ -1,27 +1,27 @@
 import React, { useState } from "react";
-import { gql, useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import List from "../components/List";
-import { GET_POKEMONS } from "../pages/api/gqlQueries";
-import { IFilterGet, IListPokemon, IPokemons } from "../libs/interface";
+import { GET_ALL_POKEMONS } from "../pages/api/gqlQueries";
+import { TFilter, TPokemon } from "../libs/interface";
 import Header from "@/components/Header";
 import Link from "next/link";
 import ListBottom from "@/components/ListBottom";
 
 export default function Home() {
-  const [filter, setFilter] = useState<IFilterGet>({
+  const [filter, setFilter] = useState<TFilter>({
     limit: 10,
     offset: 0,
   });
 
-  const { loading, error, data } = useQuery(GET_POKEMONS, {
+  const { loading, error, data } = useQuery(GET_ALL_POKEMONS, {
     variables: { limit: filter.limit, offset: filter.offset },
   });
 
-  if (loading) return "Loading...";
-  if (error) return `Error! ${error.message}`;
-  if (!data) return "No data found.";
+  if (loading) return <div>"Loading..."</div>;
+  if (error) return <div>`Error! ${error.message}`</div>;
+  if (!data) return <div>"No data found."</div>;
 
   return (
     <>
@@ -68,8 +68,12 @@ export default function Home() {
             slidesToSlide={1}
             swipeable
           >
-            {data?.pokemons?.results.map((item, index) => (
-              <Link href={`/pokemon/${item?.name ?? ""}`} key={index} className="">
+            {data?.pokemons?.results.map((item: TPokemon, index: number) => (
+              <Link
+                href={`/pokemon/${item?.name ?? ""}`}
+                key={index}
+                className=""
+              >
                 <div className="relative flex  m-2  bg-slate-100  rounded-[10px]">
                   <p className="absolute z-30 top-0 text-[15px] text-black">
                     #{index + 1 < 10 ? "00" : "0"}
@@ -84,12 +88,10 @@ export default function Home() {
                 </div>
 
                 <div className="itemName m-4">
-                  <p className="text-[20px] capitalize">
-                    {item?.name ?? ""}
-                  </p>
+                  <p className="text-[20px] capitalize">{item?.name ?? ""}</p>
                 </div>
                 <div className="pl-3 pb-10">
-                  <ListBottom name={item?.name ?? ""} />
+                  <ListBottom props={{ name: item?.name ?? "" }} />
                 </div>
               </Link>
             ))}

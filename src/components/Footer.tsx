@@ -3,16 +3,16 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div
+    <footer
       style={{
         display: "flex",
         alignItems: "center",
-        justifyContent:"center",
+        justifyContent: "center",
         color: "white",
         marginBottom: "50px",
       }}
     >
-      <footer className="footer">
+      <div className="footer">
         <Link
           href="/"
           style={{
@@ -25,8 +25,8 @@ const Footer = () => {
           <img src="/images/Vector.png" alt="home" className="w-5 h-5" />
           Back to Homepage
         </Link>
-      </footer>
-    </div>
+      </div>
+    </footer>
   );
 };
 
