@@ -18,9 +18,9 @@ const ListBottom: FC<Props> = ({ props }) => {
     },
   });
 
-  if (loading) return <div>"Loading..."</div>;
-  if (error) return <div>`Error! ${error.message}`</div>;
-  if (!data) return <div>"No data found."</div>;
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error! ${error.message}</div>;
+  if (!data) return <div>No data found.</div>;
 
   return (
     <div className="grid grid-rows-1 grid-cols-3 gap-3">
