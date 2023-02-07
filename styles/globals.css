@@ -42,7 +42,7 @@
   background-color: #FC7C23;
 }
 .flying {
-  background-color: #30A7D7;
+  background: linear-gradient(#30A7D7 0%, #30A7D7 50%, #BDBDBD 50%)
 }
 .water{
   background-color: #4592C4;
