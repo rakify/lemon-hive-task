@@ -7,7 +7,7 @@ interface Props {
   props: PropsItems;
 }
 interface PropsItems {
-  pokemons: TPokemon;
+  pokemons: Array<TPokemon>;
 }
 
 const Pokemons: FC<Props> = ({ props }) => {

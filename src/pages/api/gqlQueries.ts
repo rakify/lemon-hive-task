@@ -14,7 +14,6 @@ export const GET_ALL_POKEMONS = gql`
         name
         image
         artwork
-        dreamworld
       }
     }
   }
@@ -25,7 +24,6 @@ export const GET_SINGLE_POKEMON_DETAILS = gql`
     pokemon(name: $name) {
       id
       name
-      base_experience
       height
       weight
       stats {
@@ -37,11 +35,6 @@ export const GET_SINGLE_POKEMON_DETAILS = gql`
       }
       abilities {
         ability {
-          name
-        }
-      }
-      moves {
-        move {
           name
         }
       }

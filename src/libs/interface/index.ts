@@ -20,13 +20,11 @@ export interface TPokemon {
   name: string;
   image: string;
   artwork: string;
-  dreamworld: string;
 }
 
 export interface TDetail {
   id: number;
   name: string;
-  base_experience: number;
   height: number;
   weight: number;
   stats: Array<{
@@ -38,11 +36,6 @@ export interface TDetail {
   }>;
   abilities: Array<{
     ability: {
-      name: string;
-    };
-  }>;
-  moves: Array<{
-    move: {
       name: string;
     };
   }>;
