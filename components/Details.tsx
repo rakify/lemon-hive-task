@@ -16,7 +16,7 @@ const Details: FC<Props> = ({ props }) => {
 
   return (
     <>
-      <div className="container flex flex-col sm:flex-row">
+      <div className="details container flex flex-col sm:flex-row">
         {/* Show image on top of phone */}
         <div className="sm:hidden image p-[10px]">
           <img
@@ -43,7 +43,7 @@ const Details: FC<Props> = ({ props }) => {
             born. The seed slowly grows larger.
           </div>
           {/* Height Weight */}
-          <div className="prectangle3">
+          <div className="prectangle3 bg-gradient-to-r from-[#F68CC8] to-orange-500">
             <div className="rectangle3">
               <div className="flex flex-column justify-between ">
                 <div>
