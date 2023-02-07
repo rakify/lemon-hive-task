@@ -100,6 +100,7 @@ export default function Home() {
       </div>
       <div className="flex justify-between">
         <div
+          className="hidden sm:flex"
           style={{ backgroundImage: "url(/images/Left.png)", flex: 1 }}
         ></div>
 
@@ -177,6 +178,7 @@ export default function Home() {
           </div>
         </div>
         <div
+          className="hidden sm:flex"
           style={{ backgroundImage: "url(/images/Left.png)", flex: 1 }}
         ></div>
       </div>

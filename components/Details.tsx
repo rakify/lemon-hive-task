@@ -19,6 +19,7 @@ const Details: FC<Props> = ({ props }) => {
     <>
       <div className="flex justify-between">
         <div
+          className="hidden sm:flex"
           style={{ backgroundImage: "url(/images/Left.png)", flex: 1 }}
         ></div>
 
@@ -146,6 +147,7 @@ const Details: FC<Props> = ({ props }) => {
           <Footer />
         </div>
         <div
+          className="hidden sm:flex"
           style={{ backgroundImage: "url(/images/Left.png)", flex: 1 }}
         ></div>
       </div>
