@@ -105,7 +105,7 @@ export default function Home() {
           style={{ backgroundImage: "url(/images/Left.png)", flex: 1 }}
         ></div>
 
-        <div style={{ flex: 20 }}>
+        <div style={{ flex: 20, paddingBottom: "50px" }}>
           <div
             className="bottomTitle bg-cover bg-center sm:w-[271px] md:w-[542px] sm:h-[56] md:h-[110px] mt-[107px] mb-[30px] text-2xl sm:text-3xl"
             style={{ backgroundImage: "url(/images/Brush.png)" }}
