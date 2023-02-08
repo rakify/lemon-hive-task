@@ -147,12 +147,12 @@ const FrontBottom = () => {
             <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
           </div>
           <div className="flex flex-col justify-start space-y-4">
-            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
-            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
+            <img className="w-[108px] h-[108px]" src="/images/Image03.png" />
+            <img className="w-[108px] h-[108px]" src="/images/Image02.png" />
           </div>
           <div className="flex flex-col justify-end space-y-4">
-            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
-            <img className="w-[108px] h-[108px]" src="/images/Image04.png" />
+            <img className="w-[108px] h-[108px]" src="/images/Image05.png" />
+            <img className="w-[108px] h-[108px]" src="/images/Image01.png" />
           </div>
         </div>
         <div>

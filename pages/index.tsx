@@ -90,7 +90,7 @@ export default function Home() {
                     <img
                       src={item?.artwork ?? ""}
                       alt={item?.name ?? ""}
-                      className="w-[150px] h-[150px]  transition-all duration-300"
+                      className="w-[150px] h-[150px]  transition-all duration-300 m-[auto]"
                     />
                   </div>
 
